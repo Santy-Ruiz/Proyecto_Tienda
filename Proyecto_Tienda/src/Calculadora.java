@@ -20,6 +20,7 @@ public class Calculadora {
         do
         {
             System.out.println("¿Qué producto desea comprar?");
+            System.out.println("Prueba de cambios");
 
 
         }
