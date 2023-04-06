@@ -5,36 +5,42 @@ public class Producto {
     private double Costo;
     private double Precio;
     private String Marca;
-    public static int Catalogo[];
-
-    public Producto()
+    public Producto(String Vencimiento, String NombreProducto, String Codigo, double Costo, double Precio, String Marca)
     {
-        this.NombreProducto = NombreProducto ;
-        this.Codigo = Codigo ;
         this.Vencimiento = Vencimiento ;
+        this.Codigo = Codigo ;
+        this.NombreProducto = NombreProducto ;
         this.Costo = Costo ;
         this.Precio = Precio ;
         this.Marca = Marca ;
     }
-    public String MostrarNombre()
-    {
-        return this.NombreProducto;
-    }
-    public  String MostrarCodigo()
-    {
-        return this.Codigo ;
-    }
-    public String MostrarVencimiento()
-    {
-        return this.Vencimiento ;
-    }
-    public String MostrarMarca()
-    {
-        return this.Marca ;
+    public class Nodo {
+        private Producto producto;
+        private Nodo siguiente;
 
+        public Nodo(Producto producto, Nodo siguiente){
+            this.producto = producto;
+            this.siguiente = siguiente;
+        }
     }
-    public  double MostrarPrecio()
-    {
-        return this.Precio;
+    public class ListasLigadas{
+        private Nodo cabeza;
+        public ListasLigadas(){
+            this.cabeza=null;
+        }
+        public void agregarProducto(Producto producto){
+            Nodo nuevoNodo = new Nodo(producto, null);
+            Nodo actual = new Nodo(producto, null)
+            if (cabeza== null){
+                cabeza = nuevoNodo;
+            }
+            else {
+                Nodo siguente = cabeza;
+            }
+            while(actual.siguiente != null){
+                System.out.println(actual.Producto.Nombre);
+            }
+        }
     }
+
 }
