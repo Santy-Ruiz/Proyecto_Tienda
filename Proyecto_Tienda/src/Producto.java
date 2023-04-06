@@ -30,15 +30,22 @@ public class Producto {
         }
         public void agregarProducto(Producto producto){
             Nodo nuevoNodo = new Nodo(producto, null);
-            Nodo actual = new Nodo(producto, null)
-            if (cabeza== null){
+            if (cabeza == null){
                 cabeza = nuevoNodo;
             }
             else {
-                Nodo siguente = cabeza;
-            }
+                Nodo actual = cabeza;
+
             while(actual.siguiente != null){
-                System.out.println(actual.Producto.Nombre);
+                actual = actual.siguiente;
+            }
+        }
+        }
+        public void mostrarProducto (){
+            Nodo actual = cabeza;
+            while (actual != null){
+                System.out.println(actual.siguiente);
+                actual= actual.siguiente;
             }
         }
     }
