@@ -2,10 +2,19 @@ public class Vendedor {
     private String NombreVendedor;
     private String Carnet;
 
-    public Vendedor() {}
-    public Vendedor(String NombreVendedor, String Carnet)
-    {
-        this.NombreVendedor = NombreVendedor ;
-        this.Carnet = Carnet ;
+    public String getNombreVendedor(){
+        return NombreVendedor;
+    }
+
+    public void setNombreVendedor(String nombreVendedor) {
+        this.NombreVendedor = nombreVendedor;
+    }
+
+    public String getCarnet(){
+        return Carnet;
+    }
+
+    public void setCarnet(String carnet) {
+        this.Carnet = carnet;
     }
 }

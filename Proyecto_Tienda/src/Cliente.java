@@ -2,10 +2,21 @@ public class Cliente {
     private String Cedula;
     private String CedulaExtranjera;
 
-    public Cliente(){}
-    public Cliente(String Cedula, String CedulaExtranjera)
-    {
-        this.Cedula = Cedula ;
+    public String getCedula(){
+        return Cedula;
+    }
+
+    public void setCedula(String Cedula){
+        this.Cedula = Cedula;
+    }
+
+    public String getCedulaExtranjera(){
+        return CedulaExtranjera;
+    }
+
+    public void setCedulaExtranjera(String CedulaExtranjera){
         this.CedulaExtranjera = CedulaExtranjera;
     }
+
+
 }
