@@ -4,6 +4,7 @@ public class Producto {
     private String Vencimiento;
     private double Precio;
     private String Marca;
+    public  Producto (){}
     public Producto(String Vencimiento, String NombreProducto, String Codigo, double Precio, String Marca)
     {
         this.Vencimiento = Vencimiento ;
