@@ -4,11 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Producto.Nodo.ListasLigadas lista1= new Producto.Nodo.ListasLigadas();
-        Producto producto1 = new Producto("2023-05-30","Azucar","P0001",5000,"Azucarlite");
-        lista1.agregarProducto(producto1);
         lista1.mostrarProducto();
-
-        Calculadora Calculadora1 = new Calculadora();
+        Tienda tienda1= new Tienda();
         int Opcion = 0;
 
         System.out.println("---------Bienvenido a Tienda.SAS---------");
@@ -19,7 +16,7 @@ public class Main {
 
         switch (Opcion){
             case 1:{
-                Calculadora.MenuVentas();
+                Tienda.MenuVentas();
                 break;
             }
             case 2:{
