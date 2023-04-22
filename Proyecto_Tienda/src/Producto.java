@@ -65,8 +65,6 @@ public class Producto {
             this.siguiente = siguiente;
         }
 
-
-
         public Nodo getsiguiente() {
             return siguiente;
         }

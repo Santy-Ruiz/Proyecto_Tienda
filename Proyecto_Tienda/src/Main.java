@@ -7,6 +7,7 @@ public class Main {
         lista1.mostrarProducto();
         Tienda tienda1= new Tienda();
         int Opcion = 0;
+        String cedula = " " ;
 
         System.out.println("---------Bienvenido a Tienda.SAS---------");
         System.out.println("---------¿Que deseas hacer hoy?---------");
