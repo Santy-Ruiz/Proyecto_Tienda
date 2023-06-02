@@ -1,6 +1,8 @@
 public class Vendedor {
-    private String NombreVendedor;
-    private String Carnet;
+    private String NombreVendedor = "Juan";
+    private String Carnet = "001";
+
+
 
     public String getNombreVendedor(){
         return NombreVendedor;

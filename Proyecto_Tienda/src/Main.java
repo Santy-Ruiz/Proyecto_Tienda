@@ -14,6 +14,7 @@ public class Main {
         Prueba.Cola.mostrarProducto();
 
         int Opcion = 0;
+        String cedula = " " ;
 
         System.out.println("---------Bienvenido a Tienda.SAS---------");
         System.out.println("---------¿Que deseas hacer hoy?---------");
