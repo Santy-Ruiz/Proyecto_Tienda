@@ -6,12 +6,7 @@ public class Main {
         Producto.Nodo.ListasLigadas lista1= new Producto.Nodo.ListasLigadas();
         lista1.mostrarProducto();
         Tienda tienda1= new Tienda();
-        Prueba.Cola cola = new Prueba.Cola();
-
-        Prueba.Cola.agregarProducto("Prodcuto 1");
-        Prueba.Cola.agregarProducto("Prodcuto 2");
-
-        Prueba.Cola.mostrarProducto();
+        ColaProductos.Cola cola = new ColaProductos.Cola();
 
         int Opcion = 0;
         String cedula = " " ;
@@ -21,7 +16,7 @@ public class Main {
         System.out.println("1. Acceder al menu de ventas");
         System.out.println("2. Agregar productos ");
         System.out.println("3. Mostrar productos");
-        System.out.println("3. Salir");
+        System.out.println("4. Salir");
         Opcion = Integer.parseInt(sc.nextLine());
 
         switch (Opcion){
@@ -30,11 +25,11 @@ public class Main {
                 break;
             }
             case 2:{
-                Prueba.Cola.ingresarProducto();
+                ColaProductos.Cola.ingresarProducto();
                 break;
             }
             case 3:{
-                Prueba.Cola.mostrarProducto();
+                ColaProductos.Cola.mostrarProducto();
                 break;
             }
         }

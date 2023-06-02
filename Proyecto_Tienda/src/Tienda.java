@@ -23,8 +23,6 @@ public class Tienda {
         Producto producto4 = new Producto("2025-03-14", "Sal" , "P0004",2000,"Refisal") ;
         lista1.agregarProducto(producto4);
 
-
-
         do {
             System.out.println("Bienvenido al sistema de venta de producto");
                 System.out.println("Pulse " + 1 + " para comprar " + producto1.getNombreProducto() + " cuyo precio es " + producto1.getPrecio());
@@ -67,62 +65,6 @@ public class Tienda {
 
         System.out.println("El total de su compra es: " + TotalFactura);
 
-
-    }
-
-
-   public class Nodo{
-        private String producto;
-        private Nodo siguiente;
-
-       public Nodo(String producto) {
-           this.producto = producto;
-           this.siguiente = null;
-       }
-       public String getProducto(){
-           return producto;
-       }
-       public Nodo setSiguiente(){
-           return siguiente;
-       }
-
-       public void setSiguiente(Nodo siguiente){
-           this.siguiente=siguiente;
-       }
-   }
-
-    public class Cola {
-        private Nodo frente;
-        private Nodo fin;
-
-        public Cola(){
-            this.frente = null;
-            this.fin = null;
-        }
-        public boolean estaVacia(){
-            return frente == null;
-        }
-
-        public void agregarProducto(String producto) {
-            Nodo nuevoNodo = new Nodo(producto);
-            if (estaVacia()) {
-                frente = nuevoNodo;
-                fin = nuevoNodo;
-            } else {
-                fin.setSiguiente(nuevoNodo);
-                fin = nuevoNodo;
-            }
-            System.out.println("Se agrego el producto" + producto);
-        }
-
-        public void mostrarProducto(){
-            Nodo actual = frente;
-            System.out.println("Productos en la cola: ");
-            while (actual != null){
-                System.out.println(actual.getProducto() + actual.getProducto());
-                actual = actual.setSiguiente();
-            }
-        }
     }
 }
 
