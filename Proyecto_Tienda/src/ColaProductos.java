@@ -78,7 +78,7 @@ public class ColaProductos {
 
         public static void ingresarProducto() {
             while (true) {
-                System.out.println("Ingrese un el nommbre del producto que desees agregar  o escribe 'salir' para terminar");
+                System.out.println("Ingrese el nombre del producto que desees agregar  o escribe 'salir' para terminar");
                 String producto = sc.nextLine();
                 if (producto.equalsIgnoreCase("salir")) {
                     mostrarProducto();
