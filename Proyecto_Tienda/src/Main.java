@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+        PilaProductos pila=new PilaProductos();
         Scanner sc = new Scanner(System.in);
         Producto.Nodo.ListasLigadas lista1= new Producto.Nodo.ListasLigadas();
         lista1.mostrarProducto();
@@ -29,8 +31,6 @@ public class Main {
                 break;
             }
             case 3:{
-                ColaProductos.Cola.mostrarProducto();
-                break;
             }
         }
     }
