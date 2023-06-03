@@ -17,7 +17,7 @@ public class Main {
         System.out.println("---------¿Que deseas hacer hoy?---------");
         System.out.println("1. Acceder al menu de ventas");
         System.out.println("2. Agregar productos ");
-        System.out.println("3. Mostrar productos");
+        System.out.println("3. ");
         System.out.println("4. Salir");
         Opcion = Integer.parseInt(sc.nextLine());
 
