@@ -4,7 +4,7 @@ public class Tienda {
 
     public  static void MenuVentas() {
         PilaProductos pila=new PilaProductos();
-        Vendedor vendedor1 = new Vendedor();
+
         Cliente cliente1= new Cliente();
         Cliente clientes1 = new Cliente();
         Scanner sc = new Scanner(System.in);
@@ -65,8 +65,8 @@ public class Tienda {
         while (Respuesta.equalsIgnoreCase("si")) ;
                 probar= sc.nextLine();
         System.out.println("-----FACTURA-----");
-        System.out.println("Nombre vendedor " + vendedor1.getNombreVendedor());
-        System.out.println("Carnet vendedor " + vendedor1.getCarnet() );
+        System.out.println("Nombre vendedor "  );
+        System.out.println("Carnet vendedor "  );
         System.out.println("Digite su cedula por favor ");
 
         System.out.println("El total de su compra es: " + TotalFactura);

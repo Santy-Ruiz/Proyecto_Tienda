@@ -9,6 +9,10 @@ public class Main {
         lista1.mostrarProducto();
         Tienda tienda1= new Tienda();
         ColaProductos.Cola cola = new ColaProductos.Cola();
+        Vendedor.ListaCircular vendedor1 = new Vendedor.ListaCircular();
+
+        vendedor1.agregarVendor("Juan", "1");
+        vendedor1.agregarVendor("Pedro", "2");
 
         int Opcion = 0;
         String cedula = " " ;
@@ -17,7 +21,7 @@ public class Main {
         System.out.println("---------¿Que deseas hacer hoy?---------");
         System.out.println("1. Acceder al menu de ventas");
         System.out.println("2. Agregar productos ");
-        System.out.println("3. ");
+        System.out.println("3. Agregar venedores ");
         System.out.println("4. Salir");
         Opcion = Integer.parseInt(sc.nextLine());
 
@@ -31,6 +35,7 @@ public class Main {
                 break;
             }
             case 3:{
+                vendedor1.mostrarVendores();
             }
         }
     }
