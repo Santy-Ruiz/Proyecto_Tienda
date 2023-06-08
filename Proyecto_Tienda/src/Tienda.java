@@ -65,11 +65,11 @@ public class Tienda {
         while (Respuesta.equalsIgnoreCase("si")) ;
                 probar= sc.nextLine();
         System.out.println("-----FACTURA-----");
-        System.out.println("Nombre vendedor "  );
-        System.out.println("Carnet vendedor "  );
-        System.out.println("Digite su cedula por favor ");
+        System.out.println("Nombre vendedor: Pedro"  );
+        System.out.println("Carnet vendedor: 001 "  );
 
         System.out.println("El total de su compra es: " + TotalFactura);
+        System.out.println("Muchas gracias por su compra :)");
 
     }
 }

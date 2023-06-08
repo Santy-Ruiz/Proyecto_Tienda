@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class Vendedor {
-    private  String nombreVendedor;
+    private String nombreVendedor;
     private String ID_Vendedor;
-    public Vendedor(String nombreVendedor, String ID_Vendedor){
+
+    public Vendedor(String nombreVendedor, String ID_Vendedor) {
         this.nombreVendedor = nombreVendedor;
         this.ID_Vendedor = ID_Vendedor;
     }
@@ -13,18 +14,19 @@ public class Vendedor {
     }
 
 
-    public String getNombreVendedor(){
+    public String getNombreVendedor() {
         return nombreVendedor;
     }
-    public String getID_Vendedor(){
+
+    public String getID_Vendedor() {
         return ID_Vendedor;
     }
 
-    public String toString(){
-        return "ID: " + ID_Vendedor + ", Nombre: " + nombreVendedor;
+    public String toString() {
+        return "Vendedores Agregados: \n" + "ID del vendedor: " + ID_Vendedor + ", Nombre del Vendedor: " + nombreVendedor;
     }
 
-    public static class Nodo{
+    public static class Nodo {
         private Vendedor vendedor;
         private Nodo siguiente;
 
@@ -45,40 +47,41 @@ public class Vendedor {
             this.siguiente = siguiente;
         }
     }
-    public static class ListaCircular{
+
+    public static class ListaCircular {
 
         static Scanner scanner = new Scanner(System.in);
-         String respuesta = "";
+        String respuesta = "";
         private static Nodo cabeza;
 
         public ListaCircular() {
             this.cabeza = cabeza;
         }
 
-        public static boolean estaVacia(){
+        public static boolean estaVacia() {
             return cabeza == null;
         }
 
-        public void agregarVendor (String nombreVendedor, String ID_Vendedor){
+        public void agregarVendor(String nombreVendedor, String ID_Vendedor) {
             Vendedor nuevoVendedor = new Vendedor(nombreVendedor, ID_Vendedor);
             Nodo nuevoNodo = new Nodo(nuevoVendedor);
 
-            if (estaVacia()){
+            if (estaVacia()) {
                 cabeza = nuevoNodo;
                 cabeza.setSiguiente(cabeza);
-            }else {
-                Nodo ultimo  = cabeza;
-                while (ultimo.getSiguiente() != cabeza){
+            } else {
+                Nodo ultimo = cabeza;
+                while (ultimo.getSiguiente() != cabeza) {
                     ultimo = ultimo.getSiguiente();
                 }
-                ultimo.setSiguiente(nuevoNodo);
                 nuevoNodo.setSiguiente(cabeza);
+                ultimo.setSiguiente(nuevoNodo);
             }
         }
 
-        public static void mostrarVendores(){
-            if (estaVacia()){
-                System.out.println("La lista esta vacia");
+        public static void mostrarVendedores() {
+            if (estaVacia()) {
+                System.out.println("La lista está vacía");
                 return;
             }
 
@@ -86,9 +89,22 @@ public class Vendedor {
             do {
                 System.out.println(actual.getVendedor());
                 actual = actual.getSiguiente();
-            }while (actual !=cabeza);
+            } while (actual != cabeza);
         }
 
-    }
+        public void IngresarVendedor(){
+            System.out.println("Ingresa el nombre del vendedor que deses agregar ó ingresar 'salir' para terminar");
+            String nombreVendedor = scanner.nextLine();
+            while (!nombreVendedor.equalsIgnoreCase("salir")) {
+                System.out.println("Ingrese el ID del vendedor:");
+                String ID_Vendedor = scanner.nextLine();
+                agregarVendor(nombreVendedor, ID_Vendedor);
 
+                System.out.println("Ingresa el nombre del vendedor que deseas agregar o ingresa 'salir' para terminar");
+                nombreVendedor = scanner.nextLine();
+            }
+
+            mostrarVendedores();
+        }
+    }
 }
