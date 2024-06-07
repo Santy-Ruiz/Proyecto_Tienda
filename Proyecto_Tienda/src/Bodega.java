@@ -1,6 +1,7 @@
 public class Bodega {
     private int Cargue;
     private int Descargue;
+    private int Prueba;
     private int AlmacenamientoGeneral;
     private int AlmacenamientoPorProducto;
 
