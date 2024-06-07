@@ -3,6 +3,10 @@ public class Bodega {
     private int Descargue;
     private int Prueba;
 
+    private int getPrueba2;
+
+    private int yuca;
+
     private int power;
     private int AlmacenamientoGeneral;
     private int AlmacenamientoPorProducto;
